@@ -1,0 +1,32 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Inclusive Design Patterns
+email: info@inclusivedesignpatterns.org
+description: > # this means to ignore newlines until "baseurl:"
+    We are a community project for exploring and collecting design patterns
+    and resources for inclusive and socially-conscious design.
+baseurl: ""
+url: "http://inclusivedesignpatterns.org"
+github_username:  inclusive-design-patterns
+permalink: /blog/:year-:month-:day/:title/
+
+# patterns
+collections:
+    patterns:
+        output: true
+
+defaults:
+    -   scope:
+            path: ""
+            type: patterns
+        values:
+            layout: pattern_detail
+
+# Build settings
+markdown: kramdown
