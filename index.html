@@ -4,9 +4,14 @@ layout: default
 
 <div class="home">
 
-    <header>
-        {% capture intro_text %}{% include intro.md %}{% endcapture %}
-        {{ intro_text | markdownify }}
+    <header class="site-hero">
+        <p>
+            {{ site.description }}
+        </p>
+        <div class="site-hero-actions">
+            <a href="/about/">Learn More</a>
+            <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io">Contribute on GitHub</a>
+        </div>
     </header>
 
     <h2>Patterns</h2>
@@ -20,7 +25,5 @@ layout: default
         {% endif %}
     {% endfor %}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

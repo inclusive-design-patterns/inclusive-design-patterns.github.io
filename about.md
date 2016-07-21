@@ -1,7 +1,6 @@
 ---
-layout: post
-title:  "first post"
-date:   2016-07-20 11:48:33 -0400
+layout: default
+title: About
 ---
 
 - Many features have a single "champion" in a company
