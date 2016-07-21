@@ -20,6 +20,8 @@ permalink: /blog/:year-:month-:day/:title/
 collections:
     patterns:
         output: true
+    policy:
+        output: true
 
 defaults:
     -   scope:
@@ -27,6 +29,12 @@ defaults:
             type: patterns
         values:
             layout: pattern_detail
+    -   scope:
+            path: ""
+            type: policy
+        values:
+            layout: page
+
 
 # Build settings
 markdown: kramdown
