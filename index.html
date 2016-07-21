@@ -5,7 +5,8 @@ layout: default
 <div class="home">
 
     <header>
-        Intro text about the project goes here.
+        {% capture intro_text %}{% include intro.md %}{% endcapture %}
+        {{ intro_text | markdownify }}
     </header>
 
     <h1>Patterns</h1>
@@ -17,20 +18,6 @@ layout: default
             {{pattern.title}}
         </a></li>
         {% endif %}
-    {% endfor %}
-    </ul>
-
-    <h1 class="page-heading">Blog</h1>
-
-    <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
     {% endfor %}
     </ul>
 
